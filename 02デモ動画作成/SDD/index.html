@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silicon Dummy Doll - Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Silicon Dummy Doll</h1>
+        <div class="toggle-container">
+            <label for="researcher-mode">研究者モード</label>
+            <label class="switch">
+                <input type="checkbox" id="researcher-mode">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </div>
+    <div id="app-container">
+        <!-- 左パネル (研究者用) -->
+        <div id="left-panel" class="panel">
+            <h2>利用者背景</h2>
+            <div id="user-background">
+                <p><strong>性別:</strong> 指定なし</p>
+                <p><strong>年齢:</strong> 指定なし</p>
+                <p><strong>会話前政治的党派性:</strong> <span id="initial-partisanship">0 (中立)</span></p>
+            </div>
+        </div>
+
+        <!-- 中央チャットパネル -->
+        <div id="chat-panel">
+            <div id="chat-messages"></div>
+            <div id="chat-input">
+                <input type="text" placeholder="メッセージを入力..." disabled>
+                <button disabled>送信</button>
+            </div>
+        </div>
+
+        <!-- 右パネル (研究者用) -->
+        <div id="right-panel" class="panel">
+            <h2>測定欄</h2>
+            <div id="measurement-data">
+                <p><strong>現在の政治的党派性:</strong> <span id="current-partisanship">0 (中立)</span></p>
+                <div class="thinking-box">
+                    <p><strong>思考プロセス:</strong></p>
+                    <div id="thinking-process">
+                        <!-- ここに思考プロセスが挿入される -->
+                    </div>
+                </div>
+                <div class="intervention-box">
+                    <p><strong>介入案:</strong></p>
+                    <div id="intervention-suggestion">
+                        <!-- ここに介入案が挿入される -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
